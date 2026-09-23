@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sedekah Subuh | Yayasan Nur Mirah</title>
+<meta name="description" content="Awali hari dengan kebaikan, beri harapan untuk sesama. Sedekah Subuh bersama Yayasan Nur Mirah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --hijau:#1F5C3E;
+  --hijau-tua:#16432E;
+  --hijau-2:#2F7A52;
+  --hijau-3:#4CAF7D;
+  --hijau-pucat:#E4F2E9;
+  --hijau-pucat2:#F0F7F2;
+  --krem:#F7F2E8;
+  --abu:#F3F3F1;
+  --abu-2:#E9E9E6;
+  --putih:#FFFFFF;
+  --tinta:#1A211C;
+  --redup:#5F6B63;
+  --garis:#E4E4E0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Plus Jakarta Sans",-apple-system,Segoe UI,sans-serif;
+  color:var(--tinta);background:var(--putih);line-height:1.65;font-size:16px;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3.serif{font-family:Fraunces,Georgia,serif;font-weight:700}
+:focus-visible{outline:3px solid var(--hijau-3);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+.tengah{text-align:center}
+
+/* ================= HEADER — LATAR PUTIH (sesuai halaman 2) ================= */
+header{background:#fff;border-bottom:1px solid var(--garis);position:sticky;top:0;z-index:80}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--hijau-tua)}
+.brand svg{width:38px;height:38px;flex-shrink:0}
+.nm-brand{font-size:17.5px;font-weight:800;line-height:1.1;display:block;letter-spacing:.1px}
+.sub-brand{font-size:9.5px;letter-spacing:1.3px;text-transform:uppercase;font-weight:600;color:var(--redup);display:block}
+nav{display:flex;align-items:center;gap:28px}
+nav a.lnk{color:var(--tinta);text-decoration:none;font-size:14.5px;font-weight:600;transition:color .2s}
+nav a.lnk:hover,nav a.lnk.aktif{color:var(--hijau-2)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  text-decoration:none;font-weight:700;font-size:14.5px;font-family:inherit;
+  padding:12px 25px;border-radius:999px;border:2px solid transparent;cursor:pointer;
+  transition:transform .18s,background .18s,box-shadow .18s,border-color .18s;
+}
+.btn-hijau{background:var(--hijau);color:#fff;border-color:var(--hijau);box-shadow:0 8px 20px rgba(31,92,62,.22)}
+.btn-hijau:hover{background:var(--hijau-2);border-color:var(--hijau-2);transform:translateY(-2px)}
+.btn-garis{border-color:var(--hijau);color:var(--hijau);background:transparent}
+.btn-garis:hover{background:var(--hijau);color:#fff}
+.menu-btn{display:none;background:var(--abu);border:1px solid var(--garis);border-radius:9px;
+  padding:9px 13px;cursor:pointer;color:var(--hijau-tua);font-size:17px;line-height:1}
+
+/* ================= HERO — 2 KOLOM: teks kiri, FOTO kanan ================= */
+.hero{padding:58px 0 66px;background:linear-gradient(180deg,#fff 0%,var(--hijau-pucat2) 100%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.hero h1{font-size:clamp(36px,4.9vw,58px);line-height:1.06;color:var(--hijau-tua);
+  letter-spacing:-1.3px;margin-bottom:18px;font-weight:900;font-family:Fraunces,Georgia,serif}
+.hero .sub{font-size:19px;color:var(--hijau-2);font-weight:600;margin-bottom:16px;line-height:1.5}
+.hero .desc{font-size:16.5px;color:var(--redup);max-width:530px;margin-bottom:30px}
+.hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:34px}
+
+/* 3 ikon: Mudah & Aman, Berdampak Nyata, Transparan */
+.ikon3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ikon3 div{display:flex;gap:10px;align-items:flex-start}
+.ikon3 svg{flex-shrink:0;margin-top:3px}
+.ikon3 b{display:block;font-size:13.5px;color:var(--hijau-tua);font-weight:700;line-height:1.35}
+
+/* Foto hero dengan teks overlay + kotak */
+.hero-foto{position:relative;border-radius:20px;overflow:hidden;
+  box-shadow:0 22px 52px rgba(22,67,46,.18);aspect-ratio:4/3.2}
+.hero-foto img{width:100%;height:100%;object-fit:cover}
+.hero-foto .lapis{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,30,20,.06) 0%,rgba(10,30,20,.34) 52%,rgba(10,30,20,.78) 100%)}
+.hero-foto .teks{position:absolute;left:22px;bottom:20px;right:22px;color:#fff;
+  font-family:Fraunces,Georgia,serif;font-size:18px;font-style:italic;
+  text-shadow:0 2px 14px rgba(0,0,0,.5);line-height:1.45}
+.hero-foto .kotak{
+  position:absolute;left:22px;top:22px;background:rgba(255,255,255,.95);
+  border-radius:10px;padding:9px 15px;font-size:12.5px;font-weight:700;color:var(--hijau-tua);
+  backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(0,0,0,.13)}
+
+/* ================= SECTION UMUM ================= */
+section{padding:80px 0}
+.sec-head{text-align:center;max-width:740px;margin:0 auto 46px}
+.kicker{display:inline-block;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--hijau-3);font-weight:800;margin-bottom:12px}
+.sec-head h2{font-size:clamp(26px,3.3vw,38px);color:var(--hijau-tua);line-height:1.2;
+  margin-bottom:13px;letter-spacing:-.8px;font-family:Fraunces,Georgia,serif}
+.sec-head p{color:var(--redup);font-size:16.5px}
+
+/* ================= MENGAPA — 4 pilar ikon ================= */
+.pilar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center}
+.pilar .lingkaran{width:74px;height:74px;border-radius:50%;background:var(--hijau-pucat);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+  transition:transform .22s,background .22s}
+.pilar:hover .lingkaran{transform:scale(1.08);background:var(--hijau-3)}
+.pilar:hover .lingkaran svg *{stroke:#fff}
+.pilar p{font-size:14.5px;color:var(--redup);line-height:1.6}
+
+/* ================= PROGRAM UTAMA — kartu krem, 2 kolom ================= */
+.prog-utama{background:var(--krem);border-radius:22px;padding:0;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.pu-kiri{padding:44px 42px}
+.pu-label{font-size:11.5px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--hijau-3);font-weight:800;margin-bottom:12px;display:block}
+.pu-kiri h3{font-size:clamp(24px,2.7vw,32px);color:var(--hijau-tua);line-height:1.22;
+  margin-bottom:16px;font-family:Fraunces,Georgia,serif;font-weight:700;letter-spacing:-.5px}
+.pu-kiri .desc{font-size:16px;color:var(--redup);margin-bottom:24px}
+.pu-kotak{background:var(--hijau-pucat);border-radius:14px;padding:20px 22px;
+  display:flex;gap:15px;align-items:flex-start;margin-bottom:26px}
+.pu-kotak svg{flex-shrink:0;margin-top:2px}
+.pu-kotak .label{font-size:13.5px;color:var(--hijau-tua);font-weight:600;margin-bottom:5px}
+.pu-kotak .harga{font-size:26px;color:var(--hijau-tua);font-weight:800;letter-spacing:-.6px;line-height:1.2}
+.pu-kotak .ket{font-size:12.5px;color:var(--redup);margin-top:5px}
+.pu-kanan{position:relative;min-height:380px}
+.pu-kanan img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.pu-kanan .lapis{position:absolute;inset:0;
+  background:linear-gradient(200deg,rgba(10,30,20,.08) 0%,rgba(10,30,20,.5) 100%)}
+.pu-kanan .teks{position:absolute;left:26px;bottom:24px;right:26px;color:#fff;
+  font-family:Fraunces,Georgia,serif;font-size:19px;font-style:italic;line-height:1.45;
+  text-shadow:0 2px 14px rgba(0,0,0,.5);z-index:3}
+.pu-kanan .kartu-info{
+  position:absolute;right:22px;bottom:82px;background:#fff;border-radius:12px;
+  padding:12px 16px;display:flex;gap:10px;align-items:center;
+  box-shadow:0 10px 26px rgba(0,0,0,.16);z-index:4}
+.pu-kanan .kartu-info span{font-size:13px;font-weight:700;color:var(--hijau-tua);line-height:1.3}
+
+/* ================= PROGRAM LAINNYA — 4 kartu foto ================= */
+.plain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.plain{background:#fff;border:1px solid var(--garis);border-radius:16px;overflow:hidden;
+  transition:transform .22s,box-shadow .22s}
+.plain:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(22,67,46,.13)}
+.plain .foto{height:150px;background-size:cover;background-position:center}
+.plain .isi{padding:20px}
+.plain h4{font-size:16px;color:var(--hijau-tua);font-weight:700;margin-bottom:7px}
+.plain p{font-size:14px;color:var(--redup);line-height:1.55}
+
+/* ================= CARA IKUT — timeline + panah ================= */
+.cara{background:var(--hijau-pucat2)}
+.langkah-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:start}
+.lgk{text-align:center;padding:0 12px;position:relative}
+.lgk .ikon{width:76px;height:76px;border-radius:50%;background:#fff;
+  border:2px solid var(--hijau-pucat);display:flex;align-items:center;justify-content:center;
+  margin:0 auto 18px;box-shadow:0 8px 22px rgba(22,67,46,.1);transition:transform .22s,border-color .22s}
+.lgk:hover .ikon{transform:scale(1.07);border-color:var(--hijau-3)}
+.lgk h4{font-size:17px;color:var(--hijau-tua);margin-bottom:8px;font-weight:700}
+.lgk p{font-size:14px;color:var(--redup);line-height:1.55}
+.lgk:not(:last-child)::after{
+  content:"";position:absolute;top:36px;right:-9px;width:28px;height:12px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 12'%3E%3Cpath d='M0 6h21M16 1l5 5-5 5' fill='none' stroke='%234CAF7D' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+}
+
+/* ================= KEBAIKAN BERKELANJUTAN — FOTO sunrise ================= */
+.berkelanjutan{position:relative;color:#fff;overflow:hidden;padding:96px 0}
+.bl-latar{position:absolute;inset:0;
+  background:url("img/sunrise.jpg") center 45%/cover no-repeat}
+.bl-latar::after{content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(100deg,rgba(8,24,16,.95) 0%,rgba(8,24,16,.86) 42%,rgba(8,24,16,.62) 100%),
+    linear-gradient(180deg,rgba(8,24,16,.34) 0%,rgba(8,24,16,.12) 40%,rgba(8,24,16,.44) 100%)}
+.berkelanjutan .wrap{position:relative;z-index:2}
+.bl-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.bl-grid h2{font-size:clamp(26px,3.2vw,38px);color:#fff;line-height:1.2;margin-bottom:18px;
+  letter-spacing:-.6px;font-family:Fraunces,Georgia,serif;
+  text-shadow:0 3px 16px rgba(0,0,0,.5)}
+.bl-grid > div > p{color:rgba(255,255,255,.95);font-size:16.5px;margin-bottom:16px;
+  text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.bl-grid .kutip{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:18.5px;
+  color:#B4EFCF;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.bl-poin{display:grid;gap:13px}
+.bl-poin .item{display:flex;gap:15px;align-items:center;
+  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;padding:17px 19px;backdrop-filter:blur(10px)}
+.bl-poin .lingkaran{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.22);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bl-poin span{font-size:15.5px;color:#fff;font-weight:700;line-height:1.4}
+
+/* ================= FAQ — 2 kolom ================= */
+.faq-2{display:grid;grid-template-columns:1fr 1fr;gap:14px 22px;align-items:start;grid-auto-rows:min-content}
+details{background:var(--abu);border:1px solid var(--abu-2);border-radius:12px;
+  transition:background .2s,border-color .2s}
+details[open]{background:#fff;border-color:var(--hijau-pucat)}
+summary{cursor:pointer;padding:19px 22px;font-weight:700;color:var(--tinta);font-size:15.5px;
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:11px;height:11px;flex-shrink:0;
+  border-right:2px solid var(--hijau-3);border-bottom:2px solid var(--hijau-3);
+  transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
+details p{padding:0 22px 20px;color:var(--redup);font-size:15px;line-height:1.65}
+
+/* ================= FOOTER — latar ABU MUDA ================= */
+footer{background:var(--abu);border-top:1px solid var(--abu-2);padding:44px 0 30px;
+  font-size:14.5px;color:var(--redup)}
+.foot{display:grid;grid-template-columns:1.35fr 1.5fr 1fr;gap:30px;align-items:start}
+.foot .brandfoot{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.foot .nm{font-size:17px;font-weight:800;color:var(--hijau-tua)}
+.foot .navfoot{display:flex;flex-wrap:wrap;gap:8px 10px;padding-top:9px;white-space:nowrap}
+.foot .navfoot a{color:var(--tinta);text-decoration:none;font-weight:600;font-size:14px}
+.foot .navfoot a:hover{color:var(--hijau-2)}
+.foot .navfoot .pisah{color:var(--abu-2)}
+.sosmed{display:flex;gap:11px;justify-content:flex-end;margin-bottom:12px}
+.sosmed a{width:36px;height:36px;border-radius:50%;background:#fff;border:1px solid var(--abu-2);
+  display:flex;align-items:center;justify-content:center;transition:background .18s,transform .18s}
+.sosmed a:hover{background:var(--hijau);transform:translateY(-2px)}
+.sosmed a:hover svg *{stroke:#fff}
+.sosmed a:hover svg path[fill]{fill:#fff}
+.copyright{text-align:right;font-size:13.5px}
+
+/* ================= RESPONSIF ================= */
+@media(max-width:1020px){
+  .hero-grid,.bl-grid{grid-template-columns:1fr;gap:36px}
+  .prog-utama{grid-template-columns:1fr}
+  .pu-kanan{min-height:330px;order:-1}
+  .pilar-grid,.plain-grid{grid-template-columns:1fr 1fr}
+  .langkah-grid{grid-template-columns:1fr 1fr;gap:36px 10px}
+  .lgk:nth-child(2)::after{display:none}
+  .faq-2{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr;gap:26px}
+  .sosmed,.copyright{justify-content:flex-start;text-align:left}
+  nav{display:none}
+  nav.open{display:flex;flex-direction:column;align-items:stretch;gap:0;
+    position:absolute;top:100%;left:0;right:0;background:#fff;
+    border-bottom:1px solid var(--garis);padding:10px 26px 22px;
+    box-shadow:0 16px 34px rgba(22,67,46,.14)}
+  nav.open a.lnk{padding:15px 0;border-bottom:1px solid var(--garis)}
+  nav.open a.lnk:last-of-type{border-bottom:none}
+  nav.open .btn{margin-top:16px;width:100%}
+  .menu-btn{display:block}
+}
+@media(max-width:640px){
+  section{padding:54px 0}
+  .hero{padding:40px 0 50px}
+  .hero h1{font-size:32px;letter-spacing:-.9px}
+  .hero .sub{font-size:17px}
+  .hero-cta{flex-direction:column}
+  .ikon3{grid-template-columns:1fr;gap:14px}
+  .pilar-grid,.plain-grid,.langkah-grid{grid-template-columns:1fr}
+  .lgk::after{display:none}
+  .pu-kiri{padding:30px 24px}
+  .pu-kanan{min-height:270px}
+  .pu-kanan .kartu-info{right:14px;bottom:70px;padding:9px 12px}
+  .berkelanjutan{padding:64px 0}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#atas">
+      <svg viewBox="0 0 48 48" role="img" aria-label="Logo Yayasan Nur Mirah">
+        <circle cx="24" cy="24" r="22" fill="#1F5C3E"/>
+        <path d="M24 35c0-8.5 4.2-15 11.5-17.2C34.4 26.3 30.2 32 24 35z" fill="#A8DEBF"/>
+        <path d="M24 35c-6.2-3-10.4-8.7-11.5-17.2C19.8 20 24 26.5 24 35z" fill="#DCF0E5"/>
+        <path d="M24 12.5v22.5" stroke="#4CAF7D" stroke-width="2.1" stroke-linecap="round"/>
+      </svg>
+      <span>
+        <span class="nm-brand">Yayasan Nur Mirah</span>
+        <span class="sub-brand">Sedekah Subuh</span>
+      </span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navUtama" aria-label="Buka menu">&#9776;</button>
+    <nav id="navUtama" aria-label="Navigasi utama">
+      <a class="lnk" href="#tentang">Tentang Kami</a>
+      <a class="lnk" href="#program">Program</a>
+      <a class="lnk" href="#laporan">Laporan</a>
+      <a class="lnk" href="#faq">FAQ</a>
+      <a class="btn btn-hijau" href="#program">Dukung Sekarang</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="atas">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Sedekah Subuh</h1>
+      <p class="sub">Awali Hari dengan Kebaikan, Beri Harapan untuk Sesama.</p>
+      <p class="desc">Bersama Yayasan Nur Mirah, sedekah subuh Anda membantu menyediakan makanan bagi masyarakat yang membutuhkan serta mendukung program-program sosial lainnya.</p>
+      <div class="hero-cta">
+        <a class="btn btn-hijau" href="#program">
+          Sedekah Subuh Sekarang
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-garis" href="#program">Lihat Program</a>
+      </div>
+
+      <div class="ikon3">
+        <div>
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 17s-6-3.8-6-8a3.6 3.6 0 016-2.6A3.6 3.6 0 0116 9c0 4.2-6 8-6 8z" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          <b>Mudah &amp; Aman</b>
+        </div>
+        <div>
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="7" cy="6.5" r="2.6" fill="none" stroke="#1F5C3E" stroke-width="1.7"/><path d="M2.5 16c0-2.7 2-4.3 4.5-4.3s4.5 1.6 4.5 4.3" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linecap="round"/><circle cx="14.5" cy="8" r="2" fill="none" stroke="#1F5C3E" stroke-width="1.6"/><path d="M12.5 15.6c0-2 1-3.2 2.6-3.2s2.4 1 2.4 2.6" fill="none" stroke="#1F5C3E" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <b>Berdampak Nyata</b>
+        </div>
+        <div>
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5h7l3.5 3.5v11.5H5z" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 2.5V6h3.5M7.5 10h6M7.5 13h4" fill="none" stroke="#1F5C3E" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <b>Transparan</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-foto">
+      <img src="img/hero.jpg" alt="Dua tangan menyerahkan kotak bantuan makanan">
+      <div class="lapis"></div>
+      <div class="kotak">Berbagi untuk Hari yang Lebih Baik</div>
+      <div class="teks">Kebaikan kecil hari ini, berarti besar bagi mereka.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MENGAPA ================= -->
+<section id="tentang">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Mengapa</span>
+      <h2>Mengapa Sedekah Subuh?</h2>
+      <p>Pagi adalah waktu yang tepat untuk memulai kebiasaan baik. Sedekah subuh adalah cara sederhana untuk menciptakan perubahan nyata.</p>
+    </div>
+    <div class="pilar-grid">
+      <div class="pilar">
+        <div class="lingkaran">
+          <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c0-6 3-10.5 8-12-1 6-3.5 10-8 12z" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 21c-4.5-2-7-6-8-12 5 1.5 8 6 8 12z" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 9v12" stroke="#1F5C3E" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <p>Membantu mereka yang sedang kesulitan.</p>
+      </div>
+      <div class="pilar">
+        <div class="lingkaran">
+          <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7.5" r="3" fill="none" stroke="#1F5C3E" stroke-width="1.7"/><path d="M3 19c0-3.3 2.7-5.4 6-5.4s6 2.1 6 5.4" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linecap="round"/><circle cx="17.5" cy="9.5" r="2.2" fill="none" stroke="#1F5C3E" stroke-width="1.6"/><path d="M15 18.6c0-2.4 1.2-3.9 3-3.9s3 1.3 3 3.3" fill="none" stroke="#1F5C3E" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <p>Agar lebih banyak orang mendapat bantuan.</p>
+      </div>
+      <div class="pilar">
+        <div class="lingkaran">
+          <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.3A4.2 4.2 0 0112 8a4.2 4.2 0 017 2.7c0 4.9-7 9.3-7 9.3z" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <p>Kebaikan kecil yang berarti besar.</p>
+      </div>
+      <div class="pilar">
+        <div class="lingkaran">
+          <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.6 5.3 5.9.85-4.25 4.15 1 5.85L12 15.9l-5.25 2.75 1-5.85L3.5 8.65l5.9-.85z" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <p>Menjadi pribadi yang lebih peka terhadap sekitar kita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAM UTAMA ================= -->
+<section id="program" style="background:var(--jika-tidak-ada,transparent);padding-top:0">
+  <div class="wrap">
+    <div class="prog-utama">
+      <div class="pu-kiri">
+        <span class="pu-label">Program Utama</span>
+        <h3>Dapur Darurat Yayasan Nur Mirah</h3>
+        <p class="desc">Setiap hari, kami menyediakan nasi darurat untuk masyarakat yang membutuhkan. Program ini mampu menyediakan 300 &ndash; 400 porsi makan setiap hari.</p>
+
+        <div class="pu-kotak">
+          <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h18a9 9 0 01-9 9 9 9 0 01-9-9z" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linejoin="round"/><path d="M2 11h20" stroke="#1F5C3E" stroke-width="1.7" stroke-linecap="round"/><path d="M7 8V6M12 7.5V5.5M17 8V6" stroke="#1F5C3E" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div>
+            <div class="label">Kebutuhan operasional selama 30 hari</div>
+            <div class="harga">&plusmn; Rp 30.000.000</div>
+            <div class="ket">Untuk bahan makanan, logistik, dan operasional tim.</div>
+          </div>
+        </div>
+
+        <a class="btn btn-hijau" href="#faq">
+          Dukung Dapur Darurat
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="pu-kanan">
+        <img src="img/volunteer.jpg" alt="Relawan mengemas makanan untuk Dapur Darurat">
+        <div class="lapis"></div>
+        <div class="kartu-info">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" fill="none" stroke="#1F5C3E" stroke-width="1.7"/><path d="M3 19c0-3.3 2.7-5.4 6-5.4s6 2.1 6 5.4" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linecap="round"/><circle cx="17.5" cy="10" r="2.2" fill="none" stroke="#1F5C3E" stroke-width="1.6"/><path d="M15 18.6c0-2.4 1.2-3.9 3-3.9s3 1.3 3 3.3" fill="none" stroke="#1F5C3E" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>300 &ndash; 400 porsi<br>makan setiap hari</span>
+        </div>
+        <div class="teks">Makanan hari ini, energi untuk hari esok.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAM LAINNYA ================= -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:34px">
+      <h2>Program Lainnya</h2>
+      <p>Selain Dapur Darurat, sedekah subuh juga mendukung berbagai program sosial Yayasan Nur Mirah yang berfokus pada pemberdayaan masyarakat dan bantuan kemanusiaan.</p>
+    </div>
+    <div class="plain-grid">
+      <article class="plain">
+        <div class="foto" style="background-image:url('img/pangan.jpg')" role="img" aria-label="Bantuan pangan"></div>
+        <div class="isi">
+          <h4>Bantuan Sosial</h4>
+          <p>Membantu pemenuhan kebutuhan dasar masyarakat yang membutuhkan.</p>
+        </div>
+      </article>
+      <article class="plain">
+        <div class="foto" style="background-image:url('img/anak.jpg')" role="img" aria-label="Anak-anak sekolah"></div>
+        <div class="isi">
+          <h4>Dukungan Pendidikan</h4>
+          <p>Membuka lebih banyak kesempatan belajar untuk anak-anak.</p>
+        </div>
+      </article>
+      <article class="plain">
+        <div class="foto" style="background-image:url('img/komunitas.jpg')" role="img" aria-label="Kelompok masyarakat"></div>
+        <div class="isi">
+          <h4>Pemberdayaan Masyarakat</h4>
+          <p>Program yang mendukung kemandirian dan kualitas hidup yang lebih baik.</p>
+        </div>
+      </article>
+      <article class="plain">
+        <div class="foto" style="background-image:url('img/desa.jpg')" role="img" aria-label="Lanskap desa dan pegunungan"></div>
+        <div class="isi">
+          <h4>Respon Kemanusiaan</h4>
+          <p>Bantuan cepat untuk situasi darurat dan bencana.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARA IKUT ================= -->
+<section class="cara" id="donasi">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Cara Ikut</span>
+      <h2>Cara Ikut Sedekah Subuh</h2>
+      <p>Sangat mudah, siapa pun bisa ikut berkontribusi.</p>
+    </div>
+    <div class="langkah-grid">
+      <div class="lgk">
+        <div class="ikon">
+          <svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.3A4.2 4.2 0 0112 8a4.2 4.2 0 017 2.7c0 4.9-7 9.3-7 9.3z" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Niatkan</h4>
+        <p>Lakukan dengan niat baik untuk membantu sesama.</p>
+      </div>
+      <div class="lgk">
+        <div class="ikon">
+          <svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="7" rx="7" ry="3" fill="none" stroke="#1F5C3E" stroke-width="1.7"/><path d="M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7" fill="none" stroke="#1F5C3E" stroke-width="1.7"/><path d="M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5" fill="none" stroke="#1F5C3E" stroke-width="1.7"/></svg>
+        </div>
+        <h4>Tentukan Nominal</h4>
+        <p>Tidak ada nominal khusus. Sesuaikan dengan kemampuan Anda.</p>
+      </div>
+      <div class="lgk">
+        <div class="ikon">
+          <svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="#1F5C3E" stroke-width="1.7"/><path d="M10.5 5.5h3" stroke="#1F5C3E" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="18" r="1" fill="#1F5C3E"/></svg>
+        </div>
+        <h4>Lakukan Donasi</h4>
+        <p>Melalui metode pembayaran yang tersedia.</p>
+      </div>
+      <div class="lgk">
+        <div class="ikon">
+          <svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 11-2.6-5.9" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linecap="round"/><path d="M20 3v4.5h-4.5" fill="none" stroke="#1F5C3E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Jadikan Kebiasaan</h4>
+        <p>Lakukan setiap pagi untuk dampak yang lebih besar.</p>
+      </div>
+    </div>
+    <div class="tengah" style="margin-top:44px">
+      <a class="btn btn-hijau" href="#faq">
+        Sedekah Subuh Sekarang
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KEBAIKAN BERKELANJUTAN ================= -->
+<section class="berkelanjutan" id="laporan">
+  <div class="bl-latar" role="img" aria-label="Matahari terbit di lembah hijau berkabut"></div>
+  <div class="wrap bl-grid">
+    <div>
+      <h2>Kebaikan yang Berkelanjutan</h2>
+      <p>Sedekah subuh bukan hanya membantu hari ini, tetapi juga membangun harapan untuk masa depan yang lebih baik bagi banyak orang.</p>
+      <p class="kutip">Bersama, kita bisa menghadirkan lebih banyak senyum setiap hari.</p>
+    </div>
+    <div class="bl-poin">
+      <div class="item">
+        <span class="lingkaran">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" fill="none" stroke="#fff" stroke-width="1.7"/><path d="M3 19c0-3.3 2.7-5.4 6-5.4s6 2.1 6 5.4" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><circle cx="17.5" cy="10" r="2.2" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M15 18.6c0-2.4 1.2-3.9 3-3.9s3 1.3 3 3.3" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <span>Masyarakat yang lebih terbantu</span>
+      </div>
+      <div class="item">
+        <span class="lingkaran">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c0-6 3-10.5 8-12-1 6-3.5 10-8 12z" fill="none" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 21c-4.5-2-7-6-8-12 5 1.5 8 6 8 12z" fill="none" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 9v12" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </span>
+        <span>Komunitas yang lebih berdaya</span>
+      </div>
+      <div class="item">
+        <span class="lingkaran">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <span>Dampak yang terus berkembang</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Pertanyaan yang Sering Diajukan</h2>
+    </div>
+    <div class="faq-2">
+      <details open>
+        <summary>Apakah ada nominal minimal untuk sedekah subuh?</summary>
+        <p>Tidak ada nominal minimal. Sedekah dapat dilakukan sesuai kemampuan masing-masing.</p>
+      </details>
+      <details>
+        <summary>Untuk apa saja dana sedekah subuh digunakan?</summary>
+        <p>Dana digunakan untuk mendukung program sosial Yayasan Nur Mirah, seperti Dapur Darurat, bantuan sosial, dukungan pendidikan, pemberdayaan masyarakat, dan respon kemanusiaan.</p>
+      </details>
+      <details>
+        <summary>Bagaimana cara melakukan donasi?</summary>
+        <p>Donasi dapat dilakukan melalui transfer bank, e-wallet, dan QRIS. Hubungi kami untuk mendapatkan informasi kanal resmi.</p>
+      </details>
+      <details>
+        <summary>Apakah saya bisa berdonasi setiap hari?</summary>
+        <p>Bisa. Justru kami mengajak agar sedekah subuh menjadi kebiasaan baik yang dilakukan setiap pagi.</p>
+      </details>
+      <details>
+        <summary>Apakah donasi saya aman dan transparan?</summary>
+        <p>Dana dikelola secara amanah dan transparan. Yayasan menyediakan dokumentasi serta laporan penyaluran secara berkala kepada para donatur.</p>
+      </details>
+      <details>
+        <summary>Di mana saya bisa melihat laporan penyaluran dana?</summary>
+        <p>Laporan penyaluran dikirimkan secara berkala kepada donatur, dan dapat diminta langsung melalui menu Hubungi Kami.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brandfoot">
+          <svg width="36" height="36" viewBox="0 0 48 48" role="img" aria-label="Logo Yayasan Nur Mirah">
+            <circle cx="24" cy="24" r="22" fill="#1F5C3E"/>
+            <path d="M24 35c0-8.5 4.2-15 11.5-17.2C34.4 26.3 30.2 32 24 35z" fill="#A8DEBF"/>
+            <path d="M24 35c-6.2-3-10.4-8.7-11.5-17.2C19.8 20 24 26.5 24 35z" fill="#DCF0E5"/>
+            <path d="M24 12.5v22.5" stroke="#4CAF7D" stroke-width="2.1" stroke-linecap="round"/>
+          </svg>
+          <span class="nm">Yayasan Nur Mirah</span>
+        </div>
+        <p>Menebar kebaikan, menguatkan sesama.</p>
+      </div>
+      <div>
+        <div class="navfoot">
+          <a href="#tentang">Tentang Kami</a><span class="pisah">|</span>
+          <a href="#program">Program</a><span class="pisah">|</span>
+          <a href="#laporan">Laporan</a><span class="pisah">|</span>
+          <a href="#faq">Hubungi Kami</a>
+        </div>
+      </div>
+      <div>
+        <div class="sosmed">
+          <a href="#" aria-label="Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1A211C" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#1A211C" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1A211C" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="#1A211C" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1A211C" stroke-width="2"><path d="M15 3h-3a4 4 0 00-4 4v3H6v4h2v8h4v-8h3l1-4h-4V7a1 1 0 011-1h2z"/></svg>
+          </a>
+        </div>
+        <div class="copyright">&copy; 2024 Yayasan Nur Mirah.<br>All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Menu mobile
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('navUtama');
+  if(!btn || !nav) return;
+  function tutup(){ nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); btn.innerHTML='&#9776;'; }
+  function buka(){ nav.classList.add('open'); btn.setAttribute('aria-expanded','true'); btn.innerHTML='&times;'; }
+  btn.addEventListener('click', function(){ nav.classList.contains('open') ? tutup() : buka(); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', tutup); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && nav.classList.contains('open')){ tutup(); btn.focus(); }
+  });
+  window.addEventListener('resize', function(){ if(window.innerWidth > 1020) tutup(); });
+})();
+</script>
+</body>
+</html>

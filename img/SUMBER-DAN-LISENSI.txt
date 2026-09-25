@@ -2,28 +2,42 @@ SUMBER DAN LISENSI FOTO
 ====================================================
 Semua foto dari Wikimedia Commons, lisensi bebas komersial.
 
+--- FOTO UKURAN BESAR (resolusi tinggi) ---
+
 hero.jpg        (foto hero, kanan)
-  Preparing meal Our Community Place Harrisonburg | CC BY-SA 3.0
+  Preparing meal Our Community Place Harrisonburg
+  CC BY-SA 3.0
 
 volunteer.jpg   (foto program utama Dapur Darurat)
-  Foodcycle charity meal preparation | CC BY 2.0
+  Foodcycle charity meal preparation
+  CC BY 2.0
 
 sunrise.jpg     (latar Kebaikan yang Berkelanjutan)
-  Dusk mist at Valparai | CC BY-SA 4.0
+  Dusk mist at Valparai
+  CC BY-SA 4.0
 
-pangan.jpg      (kartu Bantuan Sosial)
-  San Antonio Food Bank (USDA) | Public domain
+--- KARTU PROGRAM (diganti ke resolusi tinggi) ---
 
-anak.jpg        (kartu Dukungan Pendidikan)
-  Children Receiving Backpacks | CC BY 2.0
+pangan.jpg      (Bantuan Sosial)
+  San Antonio Food Bank (USDA)
+  Public domain
 
-komunitas.jpg   (kartu Pemberdayaan Masyarakat)
-  Law enforcement explorers | Public domain
+anak.jpg        (Dukungan Pendidikan)
+  Student studying
+  CC BY-SA 4.0   [3840x2560 -> 1000px]
 
-desa.jpg        (kartu Respon Kemanusiaan)
-  Bali, Rice fields, Rice terraces | CC BY 4.0
+komunitas.jpg   (Pemberdayaan Masyarakat)
+  Class group work at Girls Power Initiative training
+  CC BY-SA 4.0   [3264x2448 -> 1000px]
+
+desa.jpg        (Respon Kemanusiaan)
+  Flood Relief Volunteer Event
+  Public domain  [6048x4024 -> 1000px]
 
 ----------------------------------------------------
 CC BY / CC BY-SA : wajib cantumkan kredit
 Public domain    : tidak ada kewajiban kredit
 ----------------------------------------------------
+
+CATATAN: semua foto dioptimalkan untuk web (kualitas 86,
+progressive JPEG) agar halaman cepat dibuka.

@@ -255,7 +255,13 @@ footer{background:var(--abu);border-top:1px solid var(--abu-2);padding:44px 0 30
   .berkelanjutan{padding:64px 0}
   .btn{width:100%}
 }
+
+  .brand-logo{width:auto;height:54px;flex-shrink:0;display:block;
+    filter:drop-shadow(0 3px 10px rgba(0,0,0,.28))}
+  @media(max-width:520px){ .brand-logo{height:44px} }
 </style>
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/logo-128.png">
 </head>
 <body>
 
@@ -263,12 +269,8 @@ footer{background:var(--abu);border-top:1px solid var(--abu-2);padding:44px 0 30
 <header>
   <div class="wrap bar">
     <a class="brand" href="#atas">
-      <svg viewBox="0 0 48 48" role="img" aria-label="Logo Yayasan Nur Mirah">
-        <circle cx="24" cy="24" r="22" fill="#1F5C3E"/>
-        <path d="M24 35c0-8.5 4.2-15 11.5-17.2C34.4 26.3 30.2 32 24 35z" fill="#A8DEBF"/>
-        <path d="M24 35c-6.2-3-10.4-8.7-11.5-17.2C19.8 20 24 26.5 24 35z" fill="#DCF0E5"/>
-        <path d="M24 12.5v22.5" stroke="#4CAF7D" stroke-width="2.1" stroke-linecap="round"/>
-      </svg>
+      <img class="brand-logo" src="img/logo-256.png" width="66" height="54"
+           alt="Logo Yayasan Nur Mirah Makmur" loading="eager" decoding="async">
       <span>
         <span class="nm-brand">Yayasan Nur Mirah</span>
         <span class="sub-brand">Sedekah Subuh</span>
@@ -559,12 +561,8 @@ footer{background:var(--abu);border-top:1px solid var(--abu-2);padding:44px 0 30
     <div class="foot">
       <div>
         <div class="brandfoot">
-          <svg width="36" height="36" viewBox="0 0 48 48" role="img" aria-label="Logo Yayasan Nur Mirah">
-            <circle cx="24" cy="24" r="22" fill="#1F5C3E"/>
-            <path d="M24 35c0-8.5 4.2-15 11.5-17.2C34.4 26.3 30.2 32 24 35z" fill="#A8DEBF"/>
-            <path d="M24 35c-6.2-3-10.4-8.7-11.5-17.2C19.8 20 24 26.5 24 35z" fill="#DCF0E5"/>
-            <path d="M24 12.5v22.5" stroke="#4CAF7D" stroke-width="2.1" stroke-linecap="round"/>
-          </svg>
+          <img class="brand-logo" src="img/logo-256.png" width="66" height="54"
+           alt="Logo Yayasan Nur Mirah Makmur" loading="eager" decoding="async">
           <span class="nm">Yayasan Nur Mirah</span>
         </div>
         <p>Menebar kebaikan, menguatkan sesama.</p>
